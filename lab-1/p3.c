@@ -1,4 +1,4 @@
-// 3. Calculate simple interest. (principal*roi*time period)/100
+// 3. Calculate simple interest. (principal*roi*time period)/100  (A)
 
 #include <stdio.h>
 

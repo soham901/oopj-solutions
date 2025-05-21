@@ -1,10 +1,10 @@
-// 1. Calculate average of three numbers
+// 1. Calculate average of three numbers (A)
 
 #include <stdio.h>
 
-int main() {
+void main() {
     int num1, num2, num3;
-    
+
     printf("Enter three numbers:\n");
     scanf("%d %d %d", &num1, &num2, &num3);
 

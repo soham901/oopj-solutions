@@ -1,4 +1,4 @@
-// 2. Find area of circle. (pie*r*r)
+// 2. Find area of circle. (pie*r*r) (A)
 
 #include <stdio.h>
 

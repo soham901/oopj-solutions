@@ -1,4 +1,4 @@
-// 4. WAP to find factorial of the given number (using simplest method)
+// 4. WAP to find factorial of the given number (using simplest method) (B)
 
 #include <stdio.h>
 

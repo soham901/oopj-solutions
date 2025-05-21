@@ -1,4 +1,4 @@
-// 5. WAP to display all the prime numbers beween the given 2 numbers
+// 5. WAP to display all the prime numbers beween the given 2 numbers (C)
 
 #include <stdio.h>
 
@@ -9,7 +9,7 @@ void main() {
     scanf("%d", &start);
     printf("Enter the ending number: ");
     scanf("%d", &end);
-    
+
     for (i = start; i <= end; i++) {
         if (i < 2) {  // Skip numbers less than 2
             continue;
