@@ -10,6 +10,6 @@ if not isinstance(definitions, list):
 
 # Write each definition to its corresponding Java file
 for idx, definition in enumerate(definitions):
-    file_path = f'lab-4/P{idx+1}.java'
+    file_path = f'lab-5/P{idx+1}.java'
     with open(file_path, 'w') as fp:
         fp.write(f'// {definition}\n')

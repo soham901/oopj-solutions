@@ -1,6 +1,6 @@
 [
-    "1. WAP to print addition of 3 numbers (with Scanner). (A)",
-    "2. WAP to find a diameter from given area of circle. (A)",
-    "3. WAP to convert temperature from Fahrenheit to Celsius. (B)",
-    "4. Body Mass Index (BMI) is a measure of health on weight. It can be calculated by taking your weight in kilograms and dividing by the square of your height in meters. Write a program that prompts the user to enter a weight in pounds and height in inches and displays the BMI. Note: - 1 pound=.45359237 Kg and 1 inch=.0254 meters (C)"
+    "1. Write a program in java to swap 2 values taken from user with the use of 3rd variable (A)",
+    "2. Write a program in java to find area and perimeter of a sqare and rectangle. (A)",
+    "3. Write a program in java to swap 2 values taken from user without using 3rd variable (B)",
+    "4. Write a program to find compound interest. All the necessory input will be given by the user. CI=P(1+(r/100))^nt (C)"
 ]
