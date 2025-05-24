@@ -1,10 +1,11 @@
 import os
 
-FOLDER = 'lab-8'
+FOLDER = 'lab-9'
 
-definitions = """1. WAP to make a Simple Calculator using switch...case. (A)
-2. WAP that prompts the user to input number of calls and calculate the monthly telephone bills as per the following rule: (B) Minimum Rs. 200 for up to 100 calls. Plus Rs. 0.60 per call for next 50 calls. Plus Rs. 0.50 per call for next 50 calls. Plus Rs. 0.40 per call for any call beyond 200 calls.
-3. Three sides of a triangle are entered through the keyboard. WAP to check whether the triangle is isosceles, equilateral, scalene or right-angled triangle. (C)""".split('\n')
+definitions = """1. WAP to print numbers between two given numbers which is divisible by 2 but not divisible by 3. (A)
+2. WAP to find factorial of the given number. (A)
+3. WAP to find whether the given number is prime or not without using function. (B)
+4. WAP to print given number in reverse order. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
