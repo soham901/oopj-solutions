@@ -16,32 +16,26 @@ public class P2 {
         System.out.print("Enter second number: ");
         num2 = sc.nextDouble();
 
-        switch (op) {
-            case '+':
-                ans = num1 + num2;
-                break;
-            case '-':
-                ans = num1 - num2;
-                break;
-            case '*':
-                ans = num1 * num2;
-                break;
-            case '/':
-                if (num2 != 0) {
-                    ans = num1 / num2;
-                } else {
-                    System.out.println("Error: Division by zero is not allowed.");
-                    sc.close();
-                    return;
-                }
-                break;
-            default:
-                System.out.println("Invalid operation.");
-                sc.close();
-                return;
+        if (op == '+') {
+            ans = num1 + num2;
+            System.out.println("The result is: " + ans);
+        } else if (op == '-') {
+            ans = num1 - num2;
+            System.out.println("The result is: " + ans);
+        } else if (op == '*') {
+            ans = num1 * num2;
+            System.out.println("The result is: " + ans);
+        } else if (op == '/') {
+            if (num2 != 0) {
+                ans = num1 / num2;
+                System.out.println("The result is: " + ans);
+            } else {
+                System.out.println("Error: Division by zero is not allowed.");
+            }
+        } else {
+            System.out.println("Invalid operation.");
         }
 
-        System.out.println("The result is: " + ans);
         sc.close();
     }
 }

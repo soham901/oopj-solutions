@@ -1,12 +1,10 @@
 import os
 
-FOLDER = 'lab-7'
+FOLDER = 'lab-8'
 
-definitions = """1. WAP to check whether the given number is positive or negative. (A)
-2. Modify program number 2 of Lab number 6. Calculate grade of a student depending on percentage. (If >90% then A+ grade, 80-90% then A grade, 70-80% then B+ grade, 60-70% then B grade, 50-60% then C grade, 35-50% then P grade and <35 then FT) (A)
-3. Convert number of days into year, week & days. [e.g. 375 days = 1 year, 1 week and 3 days] (C)
-4. WAP that prompts the user to enter a letter and check whether a letter is a vowel or consonants. (B)
-5. WAP to find out largest number from given three numbers without using Logical Operator.(C)""".split('\n')
+definitions = """1. WAP to make a Simple Calculator using switch...case. (A)
+2. WAP that prompts the user to input number of calls and calculate the monthly telephone bills as per the following rule: (B) Minimum Rs. 200 for up to 100 calls. Plus Rs. 0.60 per call for next 50 calls. Plus Rs. 0.50 per call for next 50 calls. Plus Rs. 0.40 per call for any call beyond 200 calls.
+3. Three sides of a triangle are entered through the keyboard. WAP to check whether the triangle is isosceles, equilateral, scalene or right-angled triangle. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
