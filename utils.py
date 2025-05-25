@@ -1,22 +1,13 @@
 import os
 
-FOLDER = 'lab-22'
+FOLDER = 'lab-24'
 
-definitions = """1. Demonstrate the Method overriding using example. (A)
-2. Demonstrate the use of Super Keyword to access constructor, function and variable of immediate parent class from the subclass . (A)
-3. Demonstrate the use of Final Keyword to prevent function overriding, variable modification and extraction of a class in sub class. (B)
-4. Create a class named 'Member' having the following members: (C)
-1 - Name
-2 - Age
-3 - Phone number
-4 - Address
-5 - Salary
-It also has a method named 'printSalary' which prints the salary of the members.
-Two classes 'Employee' and 'Manager' inherits the 'Member' class. The 'Employee' and
-'Manager' classes have data members 'specialization' and 'department' respectively.
-Now, assign name, age, phone number, address and salary to an employee and a
-manager by making an object of both of these classes and print the same along with
-specialization and department respectively.""".split('\n')
+definitions = """1. The abstract Vegetable class has three subclasses named Potato, Brinjal and Tomato. Write a program that demonstrates how to establish this class hierarchy. Declare one instance variable of type String that indicates the color of a vegetable. Create and display instances of these objects. Override the toString() method of object to return a string with the name of vegetable and its color. (A)
+2. Create interface EventListener with performEvent() method. Create MouseListener interface which inherits EventListener along with mouseClicked(), mousePressed(), mouseReleased(), mouseMoved(), mouseDragged() methods. Also create KeyListener interface which inherits EventListener along with keyPressed(), keyReleased() methods. WAP to create EventDemo class which implements MouseListener and KeyListener and demonstrate all the methods of the interfaces. (A)
+3. Implement the structure of multilevel inheritance using class and interface in java. (B)
+4. The Transport interface declares a deliver () method. The abstract class Animal is the super class of the Tiger, Camel, Deer and Donkey classes. The Transport interface is implemented by the Camel and Donkey classes. Write a test program that initialize an array of four Animal objects. If the object implements the Transport interface, the deliver() method is invoked. (B)
+5. Implement the structure of hybrid inheritance using class and interface in java. (C)
+6. Declare a class called book having author_name as private data member. Extend book class to have two sub classes called book_publication & paper_publication. Each of these classes have private member called title. Write a program to show usage of dynamic method dispatch (dynamic polymorphism) to display book or paper publications of given author. Use command line arguments for inputting data. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
