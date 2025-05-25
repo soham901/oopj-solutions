@@ -1,10 +1,10 @@
 import os
 
-FOLDER = 'lab-19'
+FOLDER = 'lab-20'
 
-definitions = """1. Define Time class with hour and minute as data member. Also define addition method to add two-time objects. (A)
-2. Define class for Complex number with real and imaginary part. Describe its constructor, overload the constructors and instantiate its object. Also define addition method to add two Complex objects. (B)
-3. Create a class which ask the user to enter a sentence, and it should display count of each vowel type in the sentence. The program should continue till user enters a word "quit". Display the total count of each vowel for all sentences. (C)""".split('\n')
+definitions = """1. WAP to demonstrate single inheritance, multilevel inheritance and hierarchical inheritance. (A)
+2. Create a class named shape. In this class, we have three subclasses circle, triangle and square. WAP to display area of all three classes. (B)
+3. WAP for implementing single inheritance which creates one class account_details for getting account information and another class interest for calculating and displaying total interest from the data inserted from account details. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
