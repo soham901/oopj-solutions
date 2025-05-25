@@ -1,10 +1,10 @@
 import os
 
-FOLDER = 'lab-15'
+FOLDER = 'lab-16'
 
-definitions = """1. WAP to demonstrate the builtin function of Math class ( e.g. min(), max(), random(), pow(), sqrt(), round(), ceil(), floor(), abs()) (A)
-2. WAP to print the largest number from the three given number using Math class function. (B)
-3. WAP to check that weather the given number is Armstrong or not using Math class function. (C)""".split('\n')
+definitions = """1. WAP to demonstrate concept of nested class. (A)
+2. WAP to demonstrate anonymous inner class. (B)
+3. WAP to demonstrate concepts of auto-boxing and unboxing using wrapper class. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
