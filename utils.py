@@ -1,12 +1,10 @@
 import os
 
-FOLDER = 'lab-14'
+FOLDER = 'lab-15'
 
-definitions = """1. WAP to demonstrate the builtin function of String class ( e.g. length(), charAt(), concat(), indexOf(), equals(), valueOf(), toString(), trim(), substring()) (A)
-2. Java String Program to Print even length words. (B)
-3. Java String Program to Insert a string into another string. (B)
-4. Java String program to check whether a string is a Palindrome (C)
-5. Java String Program to Set Characters to a String and get that character from that string. (C)""".split('\n')
+definitions = """1. WAP to demonstrate the builtin function of Math class ( e.g. min(), max(), random(), pow(), sqrt(), round(), ceil(), floor(), abs()) (A)
+2. WAP to print the largest number from the three given number using Math class function. (B)
+3. WAP to check that weather the given number is Armstrong or not using Math class function. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
