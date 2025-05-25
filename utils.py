@@ -1,11 +1,11 @@
 import os
 
-FOLDER = 'lab-12'
+FOLDER = 'lab-13'
 
-definitions = """1. WAP that create an array, take the size of array from the user, take the array member from the user and display it using loop. (A)
-2. WAP to count number of even or odd number from an array of n number. (A)
-3. WAP to accept n numbers in an array. Display the sum of all the numbers which are divisible by either 3 or 5. (B)
-4. WAP to accept n numbers in an array. Now, enter a number and search whether the number is present or not in the list of array elements by using linear search. (C)""".split('\n')
+definitions = """1. WAP to read values in two-dimensional array and print them in matrix form. (A)
+2. WAP to print the score card of cricket match using the two dimensional array. Take all the input regarding score card from the user. (B)
+3. WAP to read two matrices of size n X n, perform multiplication operation and store result in third matrix and print it. (C)
+4. WAP to store numbers in 4 X 4 matrix in a two-dimensional array. Find the sum of the numbers of each row and the sum of numbers of each column of the matrix.(C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
