@@ -1,11 +1,12 @@
 import os
 
-FOLDER = 'lab-13'
+FOLDER = 'lab-14'
 
-definitions = """1. WAP to read values in two-dimensional array and print them in matrix form. (A)
-2. WAP to print the score card of cricket match using the two dimensional array. Take all the input regarding score card from the user. (B)
-3. WAP to read two matrices of size n X n, perform multiplication operation and store result in third matrix and print it. (C)
-4. WAP to store numbers in 4 X 4 matrix in a two-dimensional array. Find the sum of the numbers of each row and the sum of numbers of each column of the matrix.(C)""".split('\n')
+definitions = """1. WAP to demonstrate the builtin function of String class ( e.g. length(), charAt(), concat(), indexOf(), equals(), valueOf(), toString(), trim(), substring()) (A)
+2. Java String Program to Print even length words. (B)
+3. Java String Program to Insert a string into another string. (B)
+4. Java String program to check whether a string is a Palindrome (C)
+5. Java String Program to Set Characters to a String and get that character from that string. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
