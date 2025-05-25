@@ -1,10 +1,10 @@
 import os
 
-FOLDER = 'lab-18'
+FOLDER = 'lab-19'
 
-definitions = """1. WAP with following specifications: (A) Class Name: Employee Data Members: Employee_ID, Employee_Name, Designation, Age, Salary Member Functions: GetEmployeeDetails () and DisplayEmpolyeeDetails ().
-2. Write a class program with following specifications: (B) Class Name: Student Data Members: Enrollment_No, Student_Name, Semester, CPI and SPI Member Functions: GetStudentDetails () and DisplayStudentDetails ().
-3. WAP to create Circle class with area and perimeter function to find area and perimeter of circle. (C)""".split('\n')
+definitions = """1. Define Time class with hour and minute as data member. Also define addition method to add two-time objects. (A)
+2. Define class for Complex number with real and imaginary part. Describe its constructor, overload the constructors and instantiate its object. Also define addition method to add two Complex objects. (B)
+3. Create a class which ask the user to enter a sentence, and it should display count of each vowel type in the sentence. The program should continue till user enters a word "quit". Display the total count of each vowel for all sentences. (C)""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
