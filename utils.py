@@ -1,11 +1,22 @@
 import os
 
-FOLDER = 'lab-20'
+FOLDER = 'lab-22'
 
-definitions = """1. Write a program in Java to demonstrate use of this keyword. (A)
-2. Check whether this can access the Static variables of the class or not.(A)
-3. Write a java program static block which will be executed before main ( ) method in a class. Also demonstrate the static method. (B)
-4. Create a class "Rectangle" that would contain length and width as an instance variable and count as a static variable. Define constructors [constructor overloading (default, parameterized and copy)] to initialize variables of objects. Define methods to find area and to display variables value of objects which are created. [Note: define initializer block, static initializer block and the static variable and method. Also demonstrate the sequence of execution of initializer block and static initialize block] (C)""".split('\n')
+definitions = """1. Demonstrate the Method overriding using example. (A)
+2. Demonstrate the use of Super Keyword to access constructor, function and variable of immediate parent class from the subclass . (A)
+3. Demonstrate the use of Final Keyword to prevent function overriding, variable modification and extraction of a class in sub class. (B)
+4. Create a class named 'Member' having the following members: (C)
+1 - Name
+2 - Age
+3 - Phone number
+4 - Address
+5 - Salary
+It also has a method named 'printSalary' which prints the salary of the members.
+Two classes 'Employee' and 'Manager' inherits the 'Member' class. The 'Employee' and
+'Manager' classes have data members 'specialization' and 'department' respectively.
+Now, assign name, age, phone number, address and salary to an employee and a
+manager by making an object of both of these classes and print the same along with
+specialization and department respectively.""".split('\n')
 
 # create the directory if it doesn't exist
 if not os.path.exists(FOLDER):
