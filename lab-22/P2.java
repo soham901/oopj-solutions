@@ -1,5 +1,13 @@
 // 2. Demonstrate the use of Super Keyword to access constructor, function and variable of immediate parent class from the subclass . (A)
 
+public class P2 {
+    public static void main(String[] args) {
+        Child obj = new Child();
+        obj.display();
+        obj.show();
+    }
+}
+
 class Parent {
     int num = 100;
 
@@ -28,13 +36,5 @@ class Child extends Parent {
     void show() {
         System.out.println("Parent class variable num: " + super.num);
         System.out.println("Child class variable num: " + num);
-    }
-}
-
-public class P2 {
-    public static void main(String[] args) {
-        Child obj = new Child();
-        obj.display();
-        obj.show();
     }
 }

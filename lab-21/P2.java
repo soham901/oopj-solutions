@@ -2,6 +2,33 @@
 
 import java.util.Scanner;
 
+public class P2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter radius of the Circle: ");
+        double radius = sc.nextDouble();
+        Circle circle = new Circle(radius);
+
+        System.out.print("Enter base of the Triangle: ");
+        double base = sc.nextDouble();
+        System.out.print("Enter height of the Triangle: ");
+        double height = sc.nextDouble();
+        Triangle triangle = new Triangle(base, height);
+
+        System.out.print("Enter side of the Square: ");
+        double side = sc.nextDouble();
+        Square square = new Square(side);
+
+        System.out.println();
+        circle.displayArea();
+        triangle.displayArea();
+        square.displayArea();
+
+        sc.close();
+    }
+}
+
 class Shape {
     void displayArea() {
         System.out.println("Area calculation for shape");
@@ -45,32 +72,5 @@ class Square extends Shape {
     void displayArea() {
         double area = side * side;
         System.out.println("Area of Square: " + area);
-    }
-}
-
-public class P2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter radius of the Circle: ");
-        double radius = sc.nextDouble();
-        Circle circle = new Circle(radius);
-
-        System.out.print("Enter base of the Triangle: ");
-        double base = sc.nextDouble();
-        System.out.print("Enter height of the Triangle: ");
-        double height = sc.nextDouble();
-        Triangle triangle = new Triangle(base, height);
-
-        System.out.print("Enter side of the Square: ");
-        double side = sc.nextDouble();
-        Square square = new Square(side);
-
-        System.out.println();
-        circle.displayArea();
-        triangle.displayArea();
-        square.displayArea();
-
-        sc.close();
     }
 }

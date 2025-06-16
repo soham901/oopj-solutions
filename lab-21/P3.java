@@ -2,6 +2,14 @@
 
 import java.util.Scanner;
 
+public class P3 {
+    public static void main(String[] args) {
+        Interest acc = new Interest();
+        acc.getAccountInfo();
+        acc.calculateAndDisplayInterest();
+    }
+}
+
 class AccountDetails {
     protected double principal;
     protected double rate;
@@ -28,13 +36,5 @@ class Interest extends AccountDetails {
     public void calculateAndDisplayInterest() {
         double interest = (principal * rate * time) / 100;
         System.out.println("Total Interest: " + interest);
-    }
-}
-
-public class P3 {
-    public static void main(String[] args) {
-        Interest acc = new Interest();
-        acc.getAccountInfo();
-        acc.calculateAndDisplayInterest();
     }
 }

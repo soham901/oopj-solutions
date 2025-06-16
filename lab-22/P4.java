@@ -11,6 +11,29 @@
 // manager by making an object of both of these classes and print the same along with
 // specialization and department respectively.
 
+public class P4 {
+    public static void main(String[] args) {
+        Manager mgr = new Manager();
+        mgr.name = "Nattu Kaka";
+        mgr.age = 55;
+        mgr.phoneNumber = "9876501234";
+        mgr.address = "Gokuldham Society";
+        mgr.salary = 60000.0;
+        mgr.department = "Security";
+
+        Employee emp = new Employee();
+        emp.name = "Bagha";
+        emp.age = 60;
+        emp.phoneNumber = "9123409876";
+        emp.address = "Gokuldham Society";
+        emp.salary = 45000.0;
+        emp.specialization = "Maintenance";
+
+        mgr.displayManagerDetails();
+        emp.displayEmployeeDetails();
+    }
+}
+
 class Member {
     String name;
     int age;
@@ -50,28 +73,5 @@ class Manager extends Member {
         printSalary();
         System.out.println("Department: " + department);
         System.out.println();
-    }
-}
-
-public class P4 {
-    public static void main(String[] args) {
-        Manager mgr = new Manager();
-        mgr.name = "Nattu Kaka";
-        mgr.age = 55;
-        mgr.phoneNumber = "9876501234";
-        mgr.address = "Gokuldham Society";
-        mgr.salary = 60000.0;
-        mgr.department = "Security";
-
-        Employee emp = new Employee();
-        emp.name = "Bagha";
-        emp.age = 60;
-        emp.phoneNumber = "9123409876";
-        emp.address = "Gokuldham Society";
-        emp.salary = 45000.0;
-        emp.specialization = "Maintenance";
-
-        mgr.displayManagerDetails();
-        emp.displayEmployeeDetails();
     }
 }
