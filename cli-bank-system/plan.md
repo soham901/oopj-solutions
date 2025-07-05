@@ -1,4 +1,4 @@
-# CLI Bank System
+# CLI Bank Management System
 
 **Goal:**
 students will have a fully functional basic bank system using:
@@ -166,9 +166,8 @@ class BankAccount {
 
 ## LABS 22–26: INHERITANCE & INTERFACES
 
-> **Focus:**
->
-> - `this`, `super`, inheritance, abstract classes, interfaces
+**Focus:**
+- `this`, `super`, inheritance, abstract classes, interfaces
 
 ---
 
@@ -243,9 +242,8 @@ interface ITransaction {
 
 ## LABS 27–28: EXCEPTION HANDLING
 
-> **Focus:**
->
-> - [ ] Built-in and custom exceptions
+**Focus:**
+- [ ] Built-in and custom exceptions
 
 ---
 
@@ -280,9 +278,9 @@ class InsufficientFundsException extends Exception {
 
 ## LABS 29–30: FILE I/O
 
-> **Tasks:**
->
-> - [ ] Implement a program which tells the number of time we executed it by using FileReader and FileWriter to store and read count
+**Tasks:**
+
+- [ ] Implement a program which tells the number of time we executed it by using FileReader and FileWriter to store and read count
 
 ---
 
