@@ -1,7 +1,7 @@
-# CLI Bank Management System
+# Bank Management System
 
 **Goal:**
-students will have a fully functional basic bank system using:
+Students will build a fully functional bank system with loan functionality using:
 
 1. Arrays
 2. Control structures
@@ -11,299 +11,232 @@ students will have a fully functional basic bank system using:
 6. Exception handling
 7. File I/O
 
----
+------
 
-## LABS 10–14: FOUNDATIONS WITH ARRAYS & CONTROL STRUCTURES
+## WEEK 1: FOUNDATIONS WITH ARRAYS
 
 **Students Know:**
 
-- Variables
-- Control flow (if, switch, loops)
-- Arrays
-- Methods
-
----
-
-### LAB 10 – 11
+- Variables, control flow (if, switch, loops), arrays, methods
 
 **Tasks:**
 
-- [ ] Design **menu-driven CLI skeleton** using `switch`:
+- Build a **menu-driven CLI skeleton** using `switch`:
 
 ```
-1. Register User (store names in array)
-2. Login User (search array)
+1. Register User
+2. Login User
 3. Exit
 ```
 
-- [ ] Store user names and passwords in **parallel arrays** (e.g., `String[] usernames`, `String[] passwords`).
-- [ ] Create basic methods:
+- Store user data in **parallel arrays** (`String[] usernames`, `String[] passwords`)
+- Create foundational methods: `registerUser()`, `loginUser()`
+- Add balance tracking with `double[] balances`
 
-* `registerUser()`
-* `loginUser()`
+**Concepts:** Arrays, switch-case, loops, basic validation
 
-**Example Concepts:**
+------
 
-* Arrays
-* Switch-case
-* For/while loop
-* Basic input validation
-
----
-
-### LAB 12 – 13
+## WEEK 2: EXPANDING CORE FEATURES
 
 **Tasks:**
 
-- [ ] Create **array to hold balances**:
-
-* `double[] balances`
-  - [ ] Extend CLI menu:
+- Expand the CLI menu:
 
 ```
 4. Deposit Money
 5. Withdraw Money
 6. Show Balance
+7. View Account Details
 ```
 
-- [ ] Implement deposit and withdraw functions
-- [ ] Cannot withdraw more than balance
-- [ ] Minimum initial deposit
+- Build deposit/withdraw functionality with proper validation
+- Introduce **2D arrays** for user data: `String[][] userDetails`
+- Replace parallel arrays with structured data storage
 
-**Concepts:**
+**Concepts:** Multi-dimensional arrays, data organization
 
-* Arrays manipulation
-* Simple validation
-* Methods with parameters
+------
 
----
-
-### LAB 14
+## WEEK 3: STRING HANDLING & VALIDATION
 
 **Tasks:**
 
-- [ ] Introduce **multi-dimensional arrays**:
+- Apply **String methods** for:
+  - Password validation (length, complexity requirements)
+  - Email validation (must contain `@`)
+  - Input trimming and formatting
+- Enhance user experience with robust input handling
 
-* 2D array for user data:
-  `String[][] userDetails = new String[maxUsers][3];`
-  * 0: username
-  * 1: password
-  * 2: email
+**Concepts:** String manipulation, validation patterns
 
-- [ ] Replace parallel arrays with 2D array
-- [ ] Refactor registration/login logic
-
----
-
-## LABS 15–21: INTRODUCTION TO CLASSES & OBJECTS
-
-> **Lab 15:** String handling
-> **Lab 18–21:** Objects and Classes
-
----
-
-### LAB 15–16
+## WEEK 4: INTRODUCTION TO CLASSES & OBJECTS
 
 **Tasks:**
 
-- [ ] Use **String methods** to:
+- Create the `User` class:
 
-* Validate password length
-
-* Trim user input
-
-  - [ ] Implement email validation (Must contain `@`)
-
-  - [ ] Refactor code to improve string handling
-
----
-
-### LAB 18–19
-
-**Tasks:**
-
-- [ ] Create a `User` class:
-
-```java
+```
 class User {
    String username;
    String password;
-   double balance;
-}
-```
-
-- [ ] Use **array of `User` objects** to replace the 2D array
-
-- [ ] Update registration and login logic to use `User[]`
-
-- [ ] Refactor deposit/withdraw to be methods inside `User` class
-
----
-
-### LAB 20–21
-
-**Tasks:**
-
-- [ ] Add `BankAccount` class:
-
-```java
-class BankAccount {
-   String accountNumber;
-   double balance;
-   User owner;
-}
-```
-
-- [ ] For now, each `User` will have one `BankAccount`
-- [ ] Introduce encapsulation:
-
-* Use `private` fields.
-* Provide `getters/setters`.
-
-- [ ] CLI options now use `User` and `BankAccount` classes
-
----
-
-## LABS 22–26: INHERITANCE & INTERFACES
-
-**Focus:**
-- `this`, `super`, inheritance, abstract classes, interfaces
-
----
-
-### LAB 22–23
-
-**Tasks:**
-
-- [ ] Create a **base class `Person`**:
-
-```java
-class Person {
-   String name;
    String email;
-}
-```
-
-- [ ] `User` **extends** `Person`
-- [ ] Demonstrate `super` to initialize name/email
-
----
-
-### LAB 24
-
-**Tasks:**
-
-- [ ] Create `Account` abstract class:
-
-```java
-abstract class Account {
-   String accountNumber;
    double balance;
-
-   abstract void deposit(double amount);
-   abstract void withdraw(double amount);
-
-   void displayBalance() {
-       System.out.println("Balance: " + balance);
-   }
 }
 ```
 
-- [ ] `SavingAccount` and `CurrentAccount` overrides the `withdraw()` method
+- Replace arrays with `User[]` objects
+- Refactor registration/login logic using object-oriented principles
 
----
+**Concepts:** Classes, objects, encapsulation basics
 
-### LAB 25–26
+## WEEK 5: BANK ACCOUNTS & ENCAPSULATION
 
 **Tasks:**
 
-- [ ] Create `ILogin` interface:
+- Add the `BankAccount` class:
 
-```java
+```
+class BankAccount {
+   private String accountNumber;
+   private double balance;
+   private User owner;
+  
+   // getters/setters
+}
+```
+
+- Implement proper encapsulation with `private` fields
+- Link each user to one bank account
+
+**Concepts:** Encapsulation, getters/setters, object relationships
+
+## WEEK 6: INHERITANCE & POLYMORPHISM
+
+**Tasks:**
+
+- Create base `Person` class:
+
+```
+class Person {
+   protected String name;
+   protected String email;
+}
+```
+
+- Build `User` class that extends `Person`
+- Create abstract `Account` class with `SavingAccount` and `CurrentAccount` subclasses
+- Implement different withdrawal rules for each account type
+
+**Concepts:** Inheritance, `super`, abstract classes, polymorphism
+
+## WEEK 7: INTERFACES & LOAN SYSTEM FOUNDATION
+
+**Tasks:**
+
+- Create interfaces:
+
+```
 interface ILogin {
    boolean login(String username, String password);
 }
-```
 
-- [ ] Create `ITransaction` interface:
-
-```java
 interface ITransaction {
    void deposit(double amount);
    void withdraw(double amount);
 }
 ```
 
-- [ ] `Account` implements `ITransaction`
+- Introduce `Loan` class:
 
-- [ ] CLI options now call methods via interfaces
-
----
-
-## LABS 27–28: EXCEPTION HANDLING
-
-**Focus:**
-- [ ] Built-in and custom exceptions
-
----
-
-### LAB 27
-
-**Tasks:**
-
-- [ ] Handle:
-
-* Invalid menu choices (`InputMismatchException`)
-* Invalid numeric inputs (`NumberFormatException`)
-
----
-
-### LAB 28
-
-**Tasks:**
-
-- [ ] Create `InsufficientFundsException`:
-
-```java
-class InsufficientFundsException extends Exception {
-   public InsufficientFundsException(String message) {
-       super(message);
-   }
+```
+class Loan {
+   private double principal;
+   private double interestRate;
+   private int termMonths;
+   private double monthlyPayment;
 }
 ```
 
-- [ ] Throw this exception if withdrawal exceeds balance.
+**Concepts:** Interfaces, loan calculations
 
----
+------
 
-## LABS 29–30: FILE I/O
-
-**Tasks:**
-
-- [ ] Implement a program which tells the number of time we executed it by using FileReader and FileWriter to store and read count
-
----
-
-### LAB 29–30
+## WEEK 8: LOAN FUNCTIONALITY & CALCULATIONS
 
 **Tasks:**
 
-- [ ] Implement **file saving/loading**:
+- Implement loan approval logic (based on account balance and income)
+- Calculate monthly payments using standard loan formulas
+- Track loan balances and payment history
 
-* Save all users and accounts to a file when the CLI exits
-* Load them at startup
-  - [ ] For simplicity, use CSV format
+**Concepts:** Financial calculations, business logic
 
----
+## WEEK 9: EXCEPTION HANDLING
 
-## Final Project Recap
+**Tasks:**
 
-At the end of Lab 30:
+- Handle built-in exceptions:
+  - `InputMismatchException` for invalid menu choices
+  - `NumberFormatException` for invalid numeric inputs
+- Create custom exceptions:
 
-- **Fully working bank system:**
+```
+class InsufficientFundsException extends Exception { }
+class LoanNotApprovedException extends Exception { }
+class InvalidLoanPaymentException extends Exception { }
+```
 
-* CLI menu
-* Array-based storage
-* Classes with inheritance
-* Exception handling
-* File persistence
+------
+
+## WEEK 10: FILE I/O & PERSISTENCE
+
+**Tasks:**
+
+- Implement file operations:
+  - Save and load user data, accounts, and loans
+  - Use CSV format for simplicity
+  - Track program execution count
+- Add data persistence across program runs
+
+**Concepts:** File I/O, data serialization, persistence
+
+## WEEK 11: INTEGRATION & FINAL FEATURES
+
+**Tasks:**
+
+- Complete loan system integration:
+  - Loan approval workflow
+  - Payment scheduling
+  - Interest calculations
+- Add reporting features:
+  - Account statements
+  - Loan payment history
+  - System-wide statistics
+- Conduct final testing and refinement
+
+**Concepts:** System integration, reporting, testing
+
+------
+
+## Final Project Features
+
+**Complete Banking System:**
+
+- User registration and login with validation
+- Multiple account types (Saving/Current)
+- Deposit and withdrawal operations
+- **Loan system** with streamlined approval, payment processing, and comprehensive tracking
+- Robust exception handling across all operations
+- Reliable file-based data persistence
+- Clean, professional CLI interface
+
+**Technical Skills Demonstrated:**
+
+- Object-oriented programming principles
+- Inheritance and polymorphism implementation
+- Interface design and implementation
+- Comprehensive exception handling
+- File I/O operations and data management
+- Accurate financial calculations
+- Data validation and security protocols
